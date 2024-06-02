@@ -1,18 +1,30 @@
 import Link from "next/link";
 import { MenuDropdown } from "./components/MenuDropdown";
 import { BookingButton } from "./components/BookingButton";
+import { MenuMobile } from "./components/MenuMobile";
+import { useState } from "react";
+import { List } from "phosphor-react";
 
 export function Header(): JSX.Element {
+  const [isDrawerMenuOpen, setIsDrawerMenuOpen] = useState(false);
   return (
     <>
-      <div className="bg-teal-50 px-16 py-2 flex justify-between items-center">
-        <div className="h-14">
-          <Link href="/">
-            <img src="/images/logo.svg" alt="logo" className="h-14" />
-          </Link>
-        </div>
+      <div className="bg-teal-50 px-8 lg:px-16 py-2 flex justify-between items-center z-0">
+        <Link href="/">
+          <img src="/images/logo.svg" alt="logo" className="h-14 w-24 object-contain" />
+        </Link>
         <MenuDropdown />
-        <BookingButton />
+        <div className="hidden md:block">
+          <BookingButton />
+        </div>
+        <button className="block md:hidden" onClick={() => setIsDrawerMenuOpen(value => !value)}>
+          <List size={32} color="#475569" />
+        </button>
+      </div>
+      <div className={`absolute md:hidden -z-10 right-0 bg-slate-100
+        ${isDrawerMenuOpen ? 'animate-slide_open' : 'animate-slide_close'}`}
+      >
+        <MenuMobile />
       </div>
     </>
   );

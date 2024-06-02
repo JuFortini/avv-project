@@ -85,6 +85,22 @@ module.exports = {
       'sans': ['Mulish'],
       'serif': ['Alegreya'],
     },
+    extend: {
+      keyframes: {
+        slide_open: {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+        slide_close: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+      },
+      animation: {
+        'slide_open': 'slide_open 0.5s forwards',
+        'slide_close': 'slide_close 0.5s forwards',
+      },
+    },
   },
   plugins: [],
 }

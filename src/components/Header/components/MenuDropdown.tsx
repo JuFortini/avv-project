@@ -3,7 +3,7 @@ import { MenuButton } from "./MenuButton";
 export function MenuDropdown(): JSX.Element {
   return (
     <>
-      <div className="flex gap-x-4">
+      <div className="md:flex xl:gap-x-4 hidden">
         <MenuButton title="home" route="/" />
         <MenuButton title="sobre" route="/about" />
         <MenuButton title="exames" route="/exams" />
