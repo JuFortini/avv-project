@@ -83,7 +83,7 @@ module.exports = {
     },
     fontFamily: {
       'sans': ['Mulish'],
-      'serif': ['Alegreya'],
+      'serif': ['Marcellus'],
     },
     extend: {
       keyframes: {
