@@ -1,5 +1,5 @@
+import { About } from "./About";
 import { Presentation } from "./Presentation";
-import { About } from "./components/About";
 
 export function HomePage(): JSX.Element {
   return (
