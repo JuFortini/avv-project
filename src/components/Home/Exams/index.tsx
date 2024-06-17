@@ -8,7 +8,7 @@ export function Exams(): JSX.Element {
   return (
     <>
       {/* // TODO: implementar redirecionamentos */}
-      <div className="bg-teal-50 px-8 lg:px-16 py-16 lg:h-svh w-full flex flex-col justify-between items-center">
+      <div className="bg-teal-50 px-8 lg:px-16 py-16 2xl:h-svh w-full flex flex-col justify-between items-center">
         <h1 className="font-serif font-semibold text-4xl p-8">Nossos exames</h1>
         <div className="flex flex-col items-center lg:items-start justify-start gap-y-8 w-full">
           <div className="flex flex-col lg:flex-row self-center gap-y-8 lg:gap-x-20">
