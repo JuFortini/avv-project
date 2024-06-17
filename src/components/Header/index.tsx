@@ -7,7 +7,7 @@ import { List } from "phosphor-react";
 
 export function Header(): JSX.Element {
   const [isDrawerMenuOpen, setIsDrawerMenuOpen] = useState(false);
-  const personalShadow = 'shadow-[0_16px_32px_-16px_rgba(58,135,118,0.1)]'
+  const personalShadow = 'shadow-[0_16px_32px_-16px_rgba(58,135,118,0.1)]';
   return (
     <div className="absolute w-full">
       <div className={`relative bg-teal-50 px-8 lg:px-16 py-2 flex justify-center items-center z-10 ${personalShadow}`}>
