@@ -1,0 +1,36 @@
+{
+  "id": "partner",
+  "type": "SharedSlice",
+  "name": "Partner",
+  "description": "Partner",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "partner_logo": {
+          "type": "Image",
+          "config": {
+            "label": "Partner Logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "partner_website": {
+          "type": "Link",
+          "config": {
+            "label": "Partner Website",
+            "placeholder": "https://lentesvoluntarias.com.br",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

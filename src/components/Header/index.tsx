@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import { MenuDropdown } from "./components/MenuDropdown";
 import { BookingButton } from "./components/BookingButton";
