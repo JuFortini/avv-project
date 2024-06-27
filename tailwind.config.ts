@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors');
 const { fontSize } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ["./src/**/*.{js,ts,jsx,tsx}",],
+  content: ["./src/**/*.{js,ts,jsx,tsx, mdx,}",],
   theme: {
     colors: {
       ...colors,
@@ -82,8 +82,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'sans': ['Mulish'],
-      'serif': ['Marcellus'],
+      sans: ['var(--font-mulish)'],
+      serif: ['var(--font-marcellus)'],
     },
     extend: {
       keyframes: {

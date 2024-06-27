@@ -1,3 +1,5 @@
+'use client'
+
 import { Achievements, AchievementsColor } from "./components/Achievements"
 
 export function About(): JSX.Element {

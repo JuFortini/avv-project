@@ -4,7 +4,6 @@ import { createClient } from "../../../prismicio";
 import { PartnerSlice } from "../../../../prismicio-types";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
-
 const _getPartners = async () => {
   try {
     const client = createClient();
@@ -14,6 +13,8 @@ const _getPartners = async () => {
     console.log('error while getting prismic components', error);
   }
 };
+
+export const dynamic = "force-dynamic";
 
 export async function Partners() {
   const _slices = await _getPartnerSlices();
@@ -39,7 +40,7 @@ export async function Partners() {
 
   return (
     <section className="bg-teal-50 px-8 w-full lg:px-16 py-16 flex flex-col justify-between items-center gap-16">
-      <h4 className="text-lg md:text-xl text-center font-semibold">
+      <h4 className="text-lg md:text-xl text-center font-semibold font-serif">
         Nossa iniciativa conta com o apoio de diversas empresas.
       </h4>
       <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row gap-x-32 max-w-xl">

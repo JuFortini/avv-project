@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { HomePage } from "../components/Home";
 
 export async function generateMetadata(): Promise<Metadata> {
-
   return {
     metadataBase: new URL('http://localhost:3000'),
     title: 'Associação Visão Voluntária',
@@ -23,5 +22,4 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function Index() {
   return <HomePage />
-
 }

@@ -4,7 +4,6 @@ import { repositoryName } from "../prismicio";
 import { Header } from "../components/Header";
 
 import './global.css';
-import Head from "next/head";
 
 const marcellus =
   Marcellus({
@@ -28,11 +27,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${marcellus.className} ${mulish.className}`}>
+    <html lang="en" className={`${marcellus.variable} ${mulish.variable}`}>
       <body>
-        <Head>
-          <title>Associação Visão Voluntária</title>
-        </Head>
         <Header />
         <main>{children}</main>
         <PrismicPreview repositoryName={repositoryName} />
