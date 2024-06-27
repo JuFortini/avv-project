@@ -7,7 +7,7 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 const _getPartners = async () => {
   try {
     const client = createClient();
-    const partners = await client.getByUID("homepage", "home");
+    const partners = await client.getByUID("partners", "partnersid");
     return partners;
   } catch (error) {
     console.log('error while getting prismic components', error);

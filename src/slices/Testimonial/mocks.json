@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "construction",
+				"type": "Text"
+			},
+			"location": {
+				"__TYPE__": "FieldContent",
+				"value": "around",
+				"type": "Text"
+			},
+			"environment": {
+				"__TYPE__": "FieldContent",
+				"value": "Pessoalmente",
+				"type": "Select"
+			},
+			"testimonial": {
+				"__TYPE__": "FieldContent",
+				"value": "seldom",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
