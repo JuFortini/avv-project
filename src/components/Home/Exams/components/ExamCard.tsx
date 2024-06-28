@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link";
-import { ArrowCircleRight } from "phosphor-react";
+import { ArrowCircleRight } from "@phosphor-icons/react";
 import { ReactElement } from "react";
 
 interface ExamCardProps {

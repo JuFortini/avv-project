@@ -5,7 +5,7 @@ import { MenuDropdown } from "./components/MenuDropdown";
 import { BookingButton } from "./components/BookingButton";
 import { MenuMobile } from "./components/MenuMobile";
 import { useState } from "react";
-import { List } from "phosphor-react";
+import { List } from "@phosphor-icons/react";
 
 export function Header(): JSX.Element {
   const [isDrawerMenuOpen, setIsDrawerMenuOpen] = useState(false);

@@ -7,10 +7,10 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 const _getPartners = async () => {
   try {
     const client = createClient();
-    const partners = await client.getByUID("partners", "partnersid");
+    const partners = await client.getSingle("partners");
     return partners;
   } catch (error) {
-    console.log('error while getting prismic components', error);
+    console.log('error while getting partners from prismic', error);
   }
 };
 

@@ -63,7 +63,7 @@ interface PartnersDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PartnersDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
+  prismic.PrismicDocumentWithoutUID<
     Simplify<PartnersDocumentData>,
     "partners",
     Lang
@@ -128,7 +128,7 @@ interface TestimonialsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type TestimonialsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
+  prismic.PrismicDocumentWithoutUID<
     Simplify<TestimonialsDocumentData>,
     "testimonials",
     Lang
@@ -224,7 +224,7 @@ export interface TestimonialSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   environment: prismic.SelectField<
-    "WhatsApp" | "Instagram" | "Pessoalmente" | "E-mail"
+    "Whatsapp" | "Instagram" | "Pessoalmente" | "Email"
   >;
 
   /**

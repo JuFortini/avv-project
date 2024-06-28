@@ -10,11 +10,11 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.6",
     "@prismicio/client": "^7.5.0",
     "@prismicio/next": "^1.6.0",
     "@prismicio/react": "^2.8.0",
     "next": "14.2.3",
-    "phosphor-react": "^1.4.1",
     "react": "^18",
     "react-dom": "^18"
   },

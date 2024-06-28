@@ -32,10 +32,10 @@
             "label": "Environment",
             "placeholder": "",
             "options": [
-              "WhatsApp",
+              "Whatsapp",
               "Instagram",
               "Pessoalmente",
-              "E-mail"
+              "Email"
             ]
           }
         },

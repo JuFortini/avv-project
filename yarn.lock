@@ -228,6 +228,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@phosphor-icons/react@^2.1.6":
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@phosphor-icons/react/-/react-2.1.6.tgz#7009c632972ebc8fc76b42636baaec4144ae68c1"
+  integrity sha512-F963SJvCTk0Qm5SRTSHXP8bCIYgMAbSVZ73f5DoxjP2iG/yAzRdySzbs9kVPETYxvr0zwTY4DUTqUjB3vr8sVw==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -2976,11 +2981,6 @@ peek-readable@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-5.0.0.tgz#7ead2aff25dc40458c60347ea76cfdfd63efdfec"
   integrity sha512-YtCKvLUOvwtMGmrniQPdO7MwPjgkFBtFIrmfSbYmYuq3tKDV/mcfAhBth1+C3ru7uXIZasc/pHnb+YDYNkkj4A==
-
-phosphor-react@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/phosphor-react/-/phosphor-react-1.4.1.tgz#97b0e034d9937db9b97fe53b186e9646464fd4e7"
-  integrity sha512-gO5j7U0xZrdglTAYDYPACU4xDOFBTJmptrrB/GeR+tHhCZF3nUMyGmV/0hnloKjuTrOmpSFlbfOY78H39rgjUQ==
 
 picocolors@^1.0.0, picocolors@^1.0.1:
   version "1.0.1"
