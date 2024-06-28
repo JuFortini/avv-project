@@ -19,12 +19,7 @@ export const dynamic = "force-dynamic";
 export async function Partners() {
   const _slices = await _getPartnerSlices();
 
-  function timeout(delay: number) {
-    return new Promise(res => setTimeout(res, delay));
-  }
-
   async function _getPartnerSlices() {
-    await timeout(6000);
     const partners = await _getPartners();
     if (partners != null) {
       const allSlices = partners.data.slices;

@@ -1,15 +1,19 @@
+import { TestimonialCardShimmer } from "./components/TestimonialCardShimmer";
+
 export function TestimonialsShimmer(): JSX.Element {
   return (
-    <div className="bg-teal-50 px-8 w-full lg:px-16 py-16 flex flex-col justify-between items-center gap-16">
-      <div className="animate-pulse rounded-md bg-slate-300 h-6 w-2/3"></div>
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row gap-x-32 gap-y-4 max-w-xl animate-pulse">
-        <div className="h-10 w-32 bg-slate-300"></div>
-        <div className="h-10 w-32 bg-slate-300"></div>
-        <div className="h-10 w-32 bg-slate-300"></div>
-        <div className="h-10 w-32 bg-slate-300"></div>
-        <div className="h-10 w-32 bg-slate-300"></div>
-        <div className="h-10 w-32 bg-slate-300"></div>
+    <section className="w-full bg-teal-50 px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24 justify-items-center">
+      <div className="text-center lg:text-start lg:col-span-1 pt-16 lg:sticky lg:self-start lg:top-0 flex flex-col gap-4 items-center lg:items-start w-full md:max-w-xl">
+        <div className="animate-pulse bg-slate-300 h-6 w-48"></div>
+        <div className="animate-pulse bg-slate-300 h-20 w-full"></div>
+        <div className="animate-pulse bg-slate-300 h-12 w-full"></div>
+        <div className="animate-pulse bg-slate-300 h-12 w-40"></div>
       </div>
-    </div>
+      <div className="lg:col-span-2 grid md:grid-cols-2 grid-cols-1 justify-center w-full gap-6 md:gap-16 pt-0 pb-16 lg:pt-16">
+        <TestimonialCardShimmer />
+        <TestimonialCardShimmer />
+        <TestimonialCardShimmer />
+      </div>
+    </section>
   );
 }

@@ -21,12 +21,7 @@ export const dynamic = "force-dynamic";
 export async function Testimonials() {
   const _slices = await _getTestimonialsSlices();
 
-  function timeout(delay: number) {
-    return new Promise(res => setTimeout(res, delay));
-  }
-
   async function _getTestimonialsSlices() {
-    await timeout(6000);
     const testimonials = await _getTestimonials();
     if (testimonials != null) {
       const allSlices = testimonials.data.slices;
