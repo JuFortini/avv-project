@@ -6,7 +6,8 @@ type Variant =
   | "h3"
   | "h4"
   | "h5"
-  | "p";
+  | "p"
+  | "small";
 
 interface TypographyProps {
   variant: Variant;
@@ -22,6 +23,7 @@ const tags: Record<Variant, ElementType> = {
   h4: "h4",
   h5: "h5",
   p: "p",
+  small: "p"
 };
 
 const sizes: Record<Variant, string> = {
@@ -31,6 +33,7 @@ const sizes: Record<Variant, string> = {
   h4: "text-lg font-semibold md:text-xl lg:text-2xl",
   h5: "text-base font-semibold md:text-lg lg:text-xl",
   p: "text-sm md:text-base lg:text-lg",
+  small: "text-xs md:text-sm lg:text-base",
 };
 
 export const Typography = ({ variant, children, className, as }: TypographyProps) => {
