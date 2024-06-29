@@ -8,6 +8,7 @@ import { Partners } from "./Partners";
 import { PartnersShimmer } from "./Partners/loading";
 import { Testimonials } from "./Testimonials";
 import { TestimonialsShimmer } from "./Testimonials/loading";
+import { FAQ } from "./FAQ";
 
 export function HomePage(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ export function HomePage(): JSX.Element {
       <Suspense fallback={<TestimonialsShimmer />}>
         <Testimonials />
       </Suspense>
+      <FAQ />
     </>
   )
 }

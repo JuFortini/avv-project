@@ -34,16 +34,18 @@ export async function Partners() {
   }
 
   return (
-    <section className="bg-teal-50 px-8 w-full lg:px-16 py-16 flex flex-col justify-between items-center gap-16">
-      <h4 className="text-lg md:text-xl text-center font-semibold font-serif">
-        Nossa iniciativa conta com o apoio de diversas empresas.
-      </h4>
-      <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row gap-x-32 max-w-xl">
-        {_slices.map((p: PartnerSlice) => (
-          <PrismicNextLink className="max-w-24 md:max-w-none" key={p.id} field={p.primary.partner_website}>
-            <PrismicNextImage field={p.primary.partner_logo} alt="" />
-          </PrismicNextLink>
-        ))}
+    <section className="bg-teal-50 flex justify-center">
+      <div className="container px-8 w-full lg:px-16 py-16 flex flex-col justify-between items-center gap-16">
+        <h4 className="text-lg md:text-xl text-center font-semibold font-serif">
+          Nossa iniciativa conta com o apoio de diversas empresas.
+        </h4>
+        <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row gap-x-32 max-w-xl">
+          {_slices.map((p: PartnerSlice) => (
+            <PrismicNextLink className="max-w-24 md:max-w-none" key={p.id} field={p.primary.partner_website}>
+              <PrismicNextImage field={p.primary.partner_logo} alt="" />
+            </PrismicNextLink>
+          ))}
+        </div>
       </div>
     </section>
   );

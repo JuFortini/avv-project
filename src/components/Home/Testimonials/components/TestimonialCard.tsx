@@ -1,5 +1,3 @@
-'use client'
-
 import { InstagramLogo, WhatsappLogo, UserSound, Envelope } from "@phosphor-icons/react";
 
 export const TestimonialCardEnvironmentIcon = {
