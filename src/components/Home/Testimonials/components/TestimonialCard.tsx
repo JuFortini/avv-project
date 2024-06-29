@@ -1,4 +1,5 @@
 import { InstagramLogo, WhatsappLogo, UserSound, Envelope } from "@phosphor-icons/react";
+import { Typography } from "../../../../utils/Typography";
 
 export const TestimonialCardEnvironmentIcon = {
   Whatsapp: <WhatsappLogo size={24} color="#FFFFFF" />,
@@ -35,7 +36,7 @@ export function TestimonialCard({ name, location, environment, testimonial }: Te
     <div className="bg-slate-50 rounded-lg divide-y w-full md:max-w-sm even:md:relative even:md:top-16">
       <div className="p-6 flex justify-between items-center">
         <div className="flex flex-col gap-1">
-          <h5 className="font-bold text-lg text-teal-500">{name}</h5>
+          <Typography variant="p" className="font-bold text-teal-500">{name}</Typography>
           <p className="text-xs font-semibold font-serif text-slate-600">{location}</p>
         </div>
         {environment != undefined ?
@@ -44,9 +45,9 @@ export function TestimonialCard({ name, location, environment, testimonial }: Te
           </div> :
           <></>}
       </div>
-      <p className="p-6 font-semibold text-teal-800">
+      <Typography variant="small" className="p-6 font-semibold text-teal-800">
         "{testimonial}"
-      </p>
+      </Typography>
     </div>
   );
 }
