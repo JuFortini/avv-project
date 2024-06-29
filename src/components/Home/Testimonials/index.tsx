@@ -37,7 +37,7 @@ export async function Testimonials() {
   return (
     <section className="bg-teal-50 flex justify-center">
       <div className="container w-full px-8 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-24 justify-items-center">
-        <div className="text-center lg:text-start lg:col-span-1 pt-16 lg:sticky lg:self-start lg:top-0 flex flex-col gap-4 items-center lg:items-start max-w-xl">
+        <div className="text-center lg:text-start lg:col-span-1 pt-16 pb-0 lg:pb-16 lg:sticky lg:self-start lg:top-0 flex flex-col gap-4 items-center lg:items-start max-w-xl">
           <h4 className="text-teal-500 text-sm font-bold tracking-widest">NOSSOS DEPOIMENTOS</h4>
           <h2 className="font-serif font-bold text-lg md:text-2xl">
             Os depoimentos satisfatórios de nossos pacientes são o que nos motivam cada dia.
