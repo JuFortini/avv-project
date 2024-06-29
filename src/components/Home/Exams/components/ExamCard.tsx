@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowCircleRight } from "@phosphor-icons/react";
 import { ReactElement } from "react";
+import { Typography } from "../../../../utils/Typography";
 
 interface ExamCardProps {
   icon: ReactElement;
@@ -17,8 +18,8 @@ export function ExamCard({ icon, name, description, action }: ExamCardProps): JS
     <article className={`p-8 flex flex-col justify-between gap-6 items-center w-full lg:max-w-[24rem] bg-slate-50 rounded-2xl ${personalShadow}`}>
       <div className="flex flex-col items-center gap-y-6">
         <div className="flex h-24 w-24">{icon}</div>
-        <h4 className="text-xl font-semibold font-serif">{name}</h4>
-        <p className="text-center">{description}</p>
+        <Typography variant="h5" className="font-semibold font-serif">{name}</Typography>
+        <Typography variant="small" className="text-center">{description}</Typography>
       </div>
       <div className="flex items-center space-x-2 group">
         <Link className="transition duration-500 group-hover:-translate-x-1" href={action}>Saiba mais</Link>

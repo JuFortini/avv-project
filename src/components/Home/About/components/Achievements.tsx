@@ -1,3 +1,5 @@
+import { Typography } from "../../../../utils/Typography";
+
 export const AchievementsColor = {
   Teal: 'bg-teal-200',
   Fuchsia: 'bg-fuchsia-200',
@@ -15,8 +17,8 @@ interface AchievementsProps {
 export function Achievements({ color, title, subtitle }: AchievementsProps): JSX.Element {
   return (
     <div className={`flex flex-col justify-center w-full ${color} text-center font-serif h-full rounded-2xl space-y-4 py-8`}>
-      <h1 className="text-6xl">{title}</h1>
-      <p>{subtitle}</p>
+      <Typography variant="h1">{title}</Typography>
+      <Typography variant="p">{subtitle}</Typography>
     </div>
   );
 }

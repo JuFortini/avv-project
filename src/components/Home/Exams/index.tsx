@@ -5,13 +5,14 @@ import { ExamCard } from "./components/ExamCard";
 import { ColorBlindnessIcon } from "./images/ColorBlindnessIcon";
 import { FundusMapIcon } from "./images/FundusMapIcon";
 import { GlassesPrescriptionIcon } from "./images/GlassesPrescriptionIcon";
+import { Typography } from "../../../utils/Typography";
 
 export function Exams(): JSX.Element {
   return (
     <section className="bg-teal-50 flex justify-center">
       <div className="container px-8 lg:px-16 py-16 2xl:h-svh w-full flex flex-col justify-between items-center">
         {/* // TODO: implementar redirecionamentos */}
-        <h1 className="font-serif font-semibold text-4xl p-8">Nossos exames</h1>
+        <Typography variant="h2" className="font-semibold p-8 lg:pb-20">Nossos exames</Typography>
         <div className="flex flex-col items-center lg:items-start justify-start gap-y-8 w-full">
           <div className="flex flex-col lg:flex-row self-center gap-y-8 lg:gap-x-20">
             <ExamCard
