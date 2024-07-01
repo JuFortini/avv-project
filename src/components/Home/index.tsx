@@ -9,6 +9,7 @@ import { PartnersShimmer } from "./Partners/loading";
 import { Testimonials } from "./Testimonials";
 import { TestimonialsShimmer } from "./Testimonials/loading";
 import { FAQ } from "./FAQ";
+import { Blog } from "./Blog";
 
 export function HomePage(): JSX.Element {
   return (
@@ -23,6 +24,7 @@ export function HomePage(): JSX.Element {
         <Testimonials />
       </Suspense>
       <FAQ />
+      <Blog />
     </>
   )
 }

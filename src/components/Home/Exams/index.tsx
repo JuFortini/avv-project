@@ -21,7 +21,7 @@ export function Exams(): JSX.Element {
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quibusdam tempore
             dolorem unde animi consequatur corporis fugiat nobis illum, labore, cum soluta quam harum voluptate,
             officiis quia laborum adipisci voluptas."
-              action="/"
+              redirection="/"
             />
             <ExamCard
               icon={<GlassesPrescriptionIcon />}
@@ -29,7 +29,7 @@ export function Exams(): JSX.Element {
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae omnis tempore,
               possimus tenetur veniam eveniet magni quo necessitatibus, quisquam quam illum quae a?
               Eius laborum a fuga quia voluptate ex."
-              action="/"
+              redirection="/"
             />
             <ExamCard
               icon={<FundusMapIcon />}
@@ -37,7 +37,7 @@ export function Exams(): JSX.Element {
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, earum deserunt?
               Exercitationem esse ducimus beatae quia accusantium velit modi quae sapiente deleniti eveniet
               quibusdam sequi laboriosam natus minus, nemo ipsum!"
-              action="/"
+              redirection="/"
             />
           </div>
           <Link

@@ -4,15 +4,16 @@ import Link from "next/link";
 import { ArrowCircleRight } from "@phosphor-icons/react";
 import { ReactElement } from "react";
 import { Typography } from "../../../../utils/Typography";
+import { ReadMoreButton } from "../../../../utils/ReadMoreButton";
 
 interface ExamCardProps {
   icon: ReactElement;
   name: string;
   description: string;
-  action: string;
+  redirection: string;
 }
 
-export function ExamCard({ icon, name, description, action }: ExamCardProps): JSX.Element {
+export function ExamCard({ icon, name, description, redirection }: ExamCardProps): JSX.Element {
   const personalShadow = 'shadow-[0_16px_32px_-16px_rgba(58,135,118,0.1)]';
   return (
     <article className={`p-8 flex flex-col justify-between gap-6 items-center w-full lg:max-w-[24rem] bg-slate-50 rounded-2xl ${personalShadow}`}>
@@ -21,15 +22,7 @@ export function ExamCard({ icon, name, description, action }: ExamCardProps): JS
         <Typography variant="h5" className="font-semibold font-serif">{name}</Typography>
         <Typography variant="small" className="text-center">{description}</Typography>
       </div>
-      <div className="flex items-center space-x-2 group">
-        <Link className="transition duration-500 group-hover:-translate-x-1" href={action}>Saiba mais</Link>
-        <ArrowCircleRight
-          className="transition duration-500 group-hover:translate-x-1"
-          size={28}
-          weight="fill"
-          color="#3F9482"
-        />
-      </div>
+      <ReadMoreButton redirection={redirection} />
     </article>
   );
 }

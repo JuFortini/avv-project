@@ -16,7 +16,7 @@ export function FAQAccordion({ isOpen, question, answer, onClick }: FAQAccordion
       <div className="bg-slate-50 rounded-md flex flex-col px-4 py-2">
         <button onClick={onClick} className="flex justify-between w-full text-start items-center font-semibold">
           <Typography variant="p">{question}</Typography>
-          <div className="min-w-6">
+          <div className="min-w-6 flex justify-end">
             {isOpen ? <Minus size={14} weight="bold" /> : <Plus size={14} weight="bold" />}
           </div>
         </button>

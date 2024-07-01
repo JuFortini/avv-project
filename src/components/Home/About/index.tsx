@@ -6,7 +6,7 @@ import { Achievements, AchievementsColor } from "./components/Achievements"
 export function About(): JSX.Element {
   return (
     <section className="bg-teal-50 flex justify-center">
-      <div className="container flex flex-col items-center justify-between 2xl:h-svh px-8 lg:px-16 py-8 xl:py-24 gap-y-20 ">
+      <div className="container flex flex-col items-center justify-between 2xl:h-svh px-8 lg:px-16 py-8 xl:py-24 gap-y-20">
         <div className="space-y-4 max-w-3xl text-center">
           <Typography variant="small">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta saepe, eligendi consectetur
