@@ -10,6 +10,7 @@ import { Testimonials } from "./Testimonials";
 import { TestimonialsShimmer } from "./Testimonials/loading";
 import { FAQ } from "./FAQ";
 import { Blog } from "./Blog";
+import { Footer } from "../Footer";
 
 export function HomePage(): JSX.Element {
   return (
@@ -25,6 +26,7 @@ export function HomePage(): JSX.Element {
       </Suspense>
       <FAQ />
       <Blog />
+      <Footer />
     </>
   )
 }

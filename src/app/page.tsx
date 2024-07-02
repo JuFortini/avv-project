@@ -20,6 +20,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function Index() {
+export default function Index() {
   return <HomePage />
 }

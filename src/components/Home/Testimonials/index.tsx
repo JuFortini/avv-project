@@ -51,6 +51,7 @@ export async function Testimonials() {
         <div className="lg:col-span-2 grid md:grid-cols-2 grid-cols-1 justify-center w-full gap-6 md:gap-16 pt-0 pb-16 lg:pt-16">
           {_slices.map((t: TestimonialSlice) => (
             <TestimonialCard
+              key={t.id}
               name={t.primary.name || ''}
               location={t.primary.location || ""}
               environment={t.primary.environment || undefined}
