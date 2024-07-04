@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { FormData } from "../../../utils/send-email";
 
 export function EmailField(): JSX.Element {
   const router = useRouter();
@@ -16,6 +17,7 @@ export function EmailField(): JSX.Element {
       setIsActive(false);
     }
   }
+
   return (
     <div className="flex flex-col gap-2">
       <div className="flex gap-4 text-xs xl:text-sm">
@@ -23,16 +25,16 @@ export function EmailField(): JSX.Element {
           type="email"
           placeholder="Digite seu e-mail"
           className="rounded-full flex-1 px-4 text-slate-900 focus:outline-none"
-          onChange={(value) => {
-            validateEmail(value);
-            setEmail(value.target?.value);
+          onChange={(e) => {
+            validateEmail(e);
+            setEmail(e.target?.value);
           }}
         />
         <button
           disabled={!isActive}
           className={`transition duration-200 hover:opacity-80 px-6 py-3 xl:px-8 xl:py-3 whitespace-nowrap ${isActive ? 'bg-teal-400' : 'bg-slate-400'} font-semibold rounded-full w-min`}
           onClick={() => {
-            if (window != null) {
+            if (typeof window != "undefined") {
               localStorage.setItem('email', email);
             }
             router.push('/contact');

@@ -10,14 +10,14 @@ export function SiteMap(): JSX.Element {
         Obcaecati corrupti, officia id officiis ex quis voluptatibus reiciendis soluta excepturi a iure
         veritatis ipsa sequi.
       </Typography>
-      { /* // TODO: atualizar redirecionamento */}
       <NavigationList title="Navegação">
         <Link href="/">Home</Link>
-        <Link href="/">Sobre</Link>
-        <Link href="/">Exames</Link>
-        <Link href="/">Cidades atendidas</Link>
-        <Link href="/">Blog</Link>
+        <Link href="/about">Sobre</Link>
+        <Link href="/exams">Exames</Link>
+        <Link href="/cities">Cidades atendidas</Link>
+        <Link href="/blog">Blog</Link>
       </NavigationList>
+      { /* // TODO: atualizar redirecionamento */}
       <NavigationList title="Principais Exames">
         <Link href="/">Exame 1</Link>
         <Link href="/">Exame 2</Link>
@@ -25,7 +25,7 @@ export function SiteMap(): JSX.Element {
         <Link href="/">Exame 4</Link>
         <Link href="/">Exame 5</Link>
         <Link href="/">Exame 6</Link>
-        <Link href="/">Ver todos</Link>
+        <Link href="/exams">Ver todos</Link>
       </NavigationList>
     </div>
   );
