@@ -1,10 +1,43 @@
 import Link from "next/link";
-import { InstagramLogo } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, PhoneCall, WhatsappLogo } from "@phosphor-icons/react";
 
-export function SocialMedia(): JSX.Element {
+export enum SocialMediaTheme {
+  Dark,
+  Light,
+}
+
+export enum SocialMediaType {
+  Whatsapp,
+  Instagram,
+  Facebook,
+  Telefone,
+}
+
+interface SocialMediaProps {
+  theme?: SocialMediaTheme;
+  type: SocialMediaType;
+}
+
+export function SocialMedia({ theme = SocialMediaTheme.Light, type }: SocialMediaProps): JSX.Element {
+
+  const mediaIcon = () => {
+    switch (type) {
+      case SocialMediaType.Facebook:
+        return <FacebookLogo size={20} color={theme === SocialMediaTheme.Light ? "#000000" : "#FFFFFF"} />
+      case SocialMediaType.Whatsapp:
+        return <WhatsappLogo size={20} color={theme === SocialMediaTheme.Light ? "#000000" : "#FFFFFF"} />
+      case SocialMediaType.Instagram:
+        return <InstagramLogo size={20} color={theme === SocialMediaTheme.Light ? "#000000" : "#FFFFFF"} />
+      case SocialMediaType.Telefone:
+        return <PhoneCall size={20} color={theme === SocialMediaTheme.Light ? "#000000" : "#FFFFFF"} />
+      default:
+        break;
+    }
+  }
+
   return (
-    <Link href="/" className="p-2 bg-slate-100 rounded-full flex justify-center items-center">
-      <InstagramLogo size={20} color="#000000" />
+    <Link href="/" className={`p-2 ${theme === SocialMediaTheme.Light ? 'bg-slate-100' : 'bg-teal-600'} rounded-full flex justify-center items-center`}>
+      {mediaIcon()}
     </Link>
   )
 }

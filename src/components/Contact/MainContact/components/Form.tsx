@@ -145,7 +145,6 @@ export function Form(): JSX.Element {
       />
       <InputMask
         mask="(99) 99999-9999"
-        maskChar=' '
         placeholder="Seu telefone"
         value={phone}
         onChange={(e) => { setPhone(e.target.value) }}
@@ -160,9 +159,9 @@ export function Form(): JSX.Element {
       <button
         disabled={!isFormValid}
         onClick={(e) => handleForm(e)}
-        className={`transition duration-200 hover:opacity-80 px-6 py-3 xl:px-8 xl:py-3 whitespace-nowrap ${isFormValid ? 'bg-teal-400' : 'bg-slate-400'} font-semibold rounded-full w-min`}
+        className={`transition duration-200 hover:opacity-80 px-6 py-3 xl:px-8 whitespace-nowrap ${isFormValid ? 'bg-teal-400' : 'bg-slate-300'} text-slate-50 text-sm font-semibold rounded-full w-min`}
       >
-        Enviar
+        Enviar mensagem
       </button>
     </form>
   );

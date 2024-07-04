@@ -8,7 +8,7 @@ export function MenuMobile(): JSX.Element {
         <MenuButton title="home" route="/" />
         <MenuButton title="sobre" route="/about" />
         <MenuButton title="exames" route="/exams" />
-        <MenuButton title="cidades atendidas" route="/cities" />
+        <MenuButton title="cidades" route="/cities" />
         <MenuButton title="blog" route="/blog" />
         <MenuButton title="contato" route="/contact" />
       </div>
