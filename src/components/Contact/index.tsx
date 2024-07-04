@@ -1,9 +1,9 @@
-import { Form } from "./Form";
+import { MainContact } from "./MainContact";
 
 export function ContactPage(): JSX.Element {
   return (
     <>
-      <Form />
+      <MainContact />
     </>
   );
 }

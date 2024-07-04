@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import InputMask from "react-input-mask";
 import { sendEmail, EmailState } from "../../../../utils/send-email";
 import { FormData } from "../../../../utils/send-email";
+import { Player } from "@lottiefiles/react-lottie-player";
 
-export function EmailForm(): JSX.Element {
+export function Form(): JSX.Element {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -68,6 +69,39 @@ export function EmailForm(): JSX.Element {
     setEmail('');
     setPhone('');
     setMessage('');
+  }
+
+  if (emailState === EmailState.Loading) {
+    return (
+      <Player
+        src="https://lottie.host/9dd46b7b-0159-4db9-885f-bc3349a9a0d2/VTK9SaB8Ic.json"
+        className="w-80"
+        autoplay
+        loop
+      />
+    );
+  }
+
+  if (emailState === EmailState.Success) {
+    return (
+      <Player
+        src="https://lottie.host/2af3d09d-5619-4d73-b375-cda2d88d6fdd/S7o4JI88lC.json"
+        className="w-80"
+        autoplay
+        keepLastFrame
+      />
+    );
+  }
+
+  if (emailState === EmailState.Error) {
+    return (
+      <Player
+        src="https://lottie.host/fa823ad5-ee58-405a-9ae0-8964d6d9a665/AZLW8hfUI7.json"
+        className="w-80"
+        autoplay
+        keepLastFrame
+      />
+    );
   }
 
   return (
