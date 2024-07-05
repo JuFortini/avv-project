@@ -1,0 +1,55 @@
+{
+  "id": "personal_contact",
+  "type": "SharedSlice",
+  "name": "PersonalContact",
+  "description": "PersonalContact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "photo": {
+          "type": "Image",
+          "config": {
+            "label": "Photo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "Name",
+            "placeholder": "João Pedrosa"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": "Gerente de projetos"
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": "+5522999999999"
+          }
+        },
+        "whatsapp": {
+          "type": "Text",
+          "config": {
+            "label": "Whatsapp",
+            "placeholder": "+5522999999999"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

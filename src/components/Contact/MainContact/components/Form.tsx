@@ -15,6 +15,7 @@ export function Form(): JSX.Element {
   const [message, setMessage] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
   const [emailState, setEmailState] = useState<EmailState>();
+  const personalShadow = 'shadow-[0_16px_32px_-16px_rgba(58,135,118,0.2)]';
   const fieldStyle = "rounded-3xl border-2 border-teal-50 px-4 py-2 flex-1 outline-none"
   const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   const isValidPhone = /\d+/g;
@@ -121,7 +122,7 @@ export function Form(): JSX.Element {
   }
 
   return (
-    <form className="bg-slate-50 p-8 rounded-2xl flex-1 flex flex-col gap-4 animate-in slide-in-from-bottom-56 fade-in duration-1000">
+    <form className={`bg-slate-50 p-8 rounded-2xl flex-1 flex flex-col gap-4 animate-in slide-in-from-bottom-56 fade-in duration-1000 ${personalShadow}`}>
       <div className="flex flex-col gap-4 sm:flex-row">
         <input
           className={fieldStyle}

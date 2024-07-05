@@ -1,11 +1,9 @@
-'use client'
-
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import { FormData } from "../../../utils/send-email";
 
 export function EmailField(): JSX.Element {
   const router = useRouter();
+  const pathName = usePathname();
   const [email, setEmail] = useState('');
   const [isActive, setIsActive] = useState(false);
   const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -36,8 +34,14 @@ export function EmailField(): JSX.Element {
           onClick={() => {
             if (typeof window != "undefined") {
               localStorage.setItem('email', email);
+              if (pathName === '/contact') {
+                window.location.reload();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
             }
-            router.push('/contact');
+            if (pathName !== '/contact') {
+              router.push('/contact');
+            }
           }}
         >
           Entre em contato

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FacebookLogo, InstagramLogo, PhoneCall, WhatsappLogo } from "@phosphor-icons/react";
 
 export enum SocialMediaTheme {
@@ -16,9 +15,10 @@ export enum SocialMediaType {
 interface SocialMediaProps {
   theme?: SocialMediaTheme;
   type: SocialMediaType;
+  redirection: string;
 }
 
-export function SocialMedia({ theme = SocialMediaTheme.Light, type }: SocialMediaProps): JSX.Element {
+export function SocialMedia({ theme = SocialMediaTheme.Light, type, redirection }: SocialMediaProps): JSX.Element {
 
   const mediaIcon = () => {
     switch (type) {
@@ -36,8 +36,8 @@ export function SocialMedia({ theme = SocialMediaTheme.Light, type }: SocialMedi
   }
 
   return (
-    <Link href="/" className={`p-2 ${theme === SocialMediaTheme.Light ? 'bg-slate-100' : 'bg-teal-600'} rounded-full flex justify-center items-center`}>
+    <a href={redirection} className={`p-2 ${theme === SocialMediaTheme.Light ? 'bg-slate-100' : 'bg-teal-600'} rounded-full flex justify-center items-center`}>
       {mediaIcon()}
-    </Link>
+    </a>
   )
 }

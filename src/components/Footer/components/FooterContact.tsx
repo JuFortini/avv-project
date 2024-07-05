@@ -1,6 +1,6 @@
 import { Typography } from "../../../utils/Typography"
 import { EmailField } from "./EmailField"
-import { SocialMedia } from "./SocialMedia";
+import { SocialMedia, SocialMediaType } from "./SocialMedia";
 
 export function FooterContact(): JSX.Element {
   return (
@@ -15,10 +15,10 @@ export function FooterContact(): JSX.Element {
       </div>
       <EmailField />
       <div className="gap-2 flex">
-        <SocialMedia />
-        <SocialMedia />
-        <SocialMedia />
-        <SocialMedia />
+        <SocialMedia type={SocialMediaType.Instagram} />
+        <SocialMedia type={SocialMediaType.Facebook} />
+        <SocialMedia type={SocialMediaType.Whatsapp} />
+        <SocialMedia type={SocialMediaType.Telefone} />
       </div>
     </div>
   );
