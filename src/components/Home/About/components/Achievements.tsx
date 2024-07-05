@@ -16,7 +16,7 @@ interface AchievementsProps {
 
 export function Achievements({ color, title, subtitle }: AchievementsProps): JSX.Element {
   return (
-    <div className={`flex flex-col justify-center w-full ${color} text-center font-serif h-full rounded-2xl space-y-4 py-8`}>
+    <div className={`flex flex-1 flex-col justify-center w-full ${color} text-center font-serif h-full rounded-2xl space-y-4 py-8`}>
       <Typography variant="h1">{title}</Typography>
       <Typography variant="p">{subtitle}</Typography>
     </div>

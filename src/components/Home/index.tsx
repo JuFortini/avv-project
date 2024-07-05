@@ -11,6 +11,7 @@ import { TestimonialsShimmer } from "./Testimonials/loading";
 import { FAQ } from "./FAQ";
 import { Blog } from "./Blog";
 import { Footer } from "../Footer";
+import React from "react";
 
 export function HomePage(): JSX.Element {
   return (

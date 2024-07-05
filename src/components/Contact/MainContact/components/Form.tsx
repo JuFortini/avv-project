@@ -1,11 +1,10 @@
-'use client'
-
 import { useEffect, useState } from "react";
 import InputMask from "react-input-mask";
 import { sendEmail, EmailState } from "../../../../utils/send-email";
 import { FormData } from "../../../../utils/send-email";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { Typography } from "../../../../utils/Typography";
+import { motion } from "framer-motion";
 
 export function Form(): JSX.Element {
   const [name, setName] = useState('');
@@ -95,10 +94,15 @@ export function Form(): JSX.Element {
           autoplay
           keepLastFrame
         />
-        <div className="flex flex-col items-center animate-in slide-in-from-bottom-56 fade-in duration-1000">
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.0, ease: "easeIn" }}
+        >
           <Typography variant="h4" className="font-serif font-bold text-teal-400 text-center">Agora é só aguardar.</Typography>
           <Typography variant="h4" className="font-serif font-bold text-teal-400 text-center">Em breve entraremos em contato.</Typography>
-        </div>
+        </motion.div>
       </div>
     );
   }
@@ -112,17 +116,27 @@ export function Form(): JSX.Element {
           autoplay
           keepLastFrame
         />
-        <div className="flex flex-col items-center animate-in slide-in-from-bottom-56 fade-in duration-1000">
+        <motion.div
+          className="flex flex-col items-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.0, ease: "easeIn" }}
+        >
           <Typography variant="h4" className="font-serif font-bold text-rose-500 text-center">Houve algum erro.</Typography>
           <Typography variant="h4" className="font-serif font-bold text-rose-500 text-center">Por favor, tente novamente mais tarde</Typography>
           <Typography variant="h4" className="font-serif font-bold text-rose-500 text-center">ou entre em contato pelo Whatsapp que está ao lado.</Typography>
-        </div>
+        </motion.div>
       </div>
     );
   }
 
   return (
-    <form className={`bg-slate-50 p-8 rounded-2xl flex-1 flex flex-col gap-4 animate-in slide-in-from-bottom-56 fade-in duration-1000 ${personalShadow}`}>
+    <motion.form
+      className={`bg-slate-50 p-8 rounded-2xl flex-1 flex flex-col gap-4 ${personalShadow}`}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.0, ease: "easeIn" }}
+    >
       <div className="flex flex-col gap-4 sm:flex-row">
         <input
           className={fieldStyle}
@@ -164,6 +178,6 @@ export function Form(): JSX.Element {
       >
         Enviar mensagem
       </button>
-    </form>
+    </motion.form>
   );
 }
