@@ -1,10 +1,10 @@
-export interface FAQProps {
+export interface FAQDataProps {
   id: number;
   question: string;
   answer: string;
 }
 
-export const FAQS: FAQProps[] = [
+export const FAQS: FAQDataProps[] = [
   {
     id: 1,
     question: "A consulta é de graça mesmo?",

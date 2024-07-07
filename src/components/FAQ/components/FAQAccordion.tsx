@@ -1,7 +1,7 @@
 import { Plus } from "@phosphor-icons/react";
 import { Minus } from "@phosphor-icons/react/dist/ssr";
 import { MouseEventHandler } from "react";
-import { Typography } from "../../../../utils/Typography";
+import { Typography } from "../../../utils/Typography";
 
 interface FAQAccordionProps {
   isOpen: boolean;

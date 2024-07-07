@@ -8,7 +8,7 @@ import { Partners } from "./Partners";
 import { PartnersShimmer } from "./Partners/loading";
 import { Testimonials } from "./Testimonials";
 import { TestimonialsShimmer } from "./Testimonials/loading";
-import { FAQ } from "./FAQ";
+import { FAQ } from "../FAQ";
 import { Blog } from "./Blog";
 import { Footer } from "../Footer";
 import React from "react";

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { Typography } from "../../../utils/Typography"
 import { Achievements, AchievementsColor } from "./components/Achievements"
 import React from "react";

@@ -4,16 +4,26 @@ import { ArticleCard } from "./components/ArticleCard";
 
 export function Blog(): JSX.Element {
   return (
-    <section className="bg-teal-50 flex justify-center">
+    <section className="relative bg-teal-50 flex flex-col items-center justify-center">
+      <div className="absolute bottom-0 bg-teal-800 h-1/2 w-full" />
       <motion.div
-        className="container flex flex-col items-center lg:h-svh px-8 lg:px-16 py-6 xl:py-12 gap-16"
+        className="container z-10 flex flex-col items-center lg:h-svh px-8 lg:px-16 py-6 xl:py-12 gap-16"
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.0, ease: "easeIn" }}
       >
-        <Typography variant="h3" className="text-center font-serif font-semibold">
-          Conheça mais sobre as patologias oculares que podemos identificar
-        </Typography>
+        <div className="flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 220 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeIn" }}
+          >
+            <Typography variant="small" className="text-teal-500 font-bold tracking-widest">SAIBA MAIS</Typography>
+          </motion.div>
+          <Typography variant="h3" className="text-center font-serif font-semibold">
+            Algumas patologias oculares que podemos identificar.
+          </Typography>
+        </div>
         <div className="flex-1 flex flex-col lg:flex-row gap-8">
           {/* // TODO: implementar redirecionamentos */}
           <motion.div

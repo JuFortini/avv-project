@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { FAQAccordion } from "./components/FAQAccordion";
-import { FAQS, FAQProps } from "./data/FAQS";
-import { Typography } from "../../../utils/Typography";
+import { FAQS, FAQDataProps } from "./data/FAQS";
+import { Typography } from "../../utils/Typography";
 import { motion } from "framer-motion";
 
 export function FAQ(): JSX.Element {
   const _faqs = FAQS;
   const personalShadow = 'shadow-[0_16px_32px_-16px_rgba(58,135,118,0.6)]';
-  const [questionOpened, setQuestionOpened] = useState<FAQProps | null>(null);
+  const [questionOpened, setQuestionOpened] = useState<FAQDataProps | null>(null);
   return (
     <section className="bg-teal-50 flex justify-center">
       <div className="container flex justify-center px-8 w-full lg:px-16 py-16">
@@ -19,7 +19,7 @@ export function FAQ(): JSX.Element {
         >
           <Typography variant="h2" className="text-center font-semibold">Perguntas frequentes</Typography>
           <div className="w-full flex flex-col gap-4">
-            {_faqs.map((e: FAQProps, i: number) => (
+            {_faqs.map((e: FAQDataProps, i: number) => (
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -6,7 +6,7 @@ import { DirectContact } from "./DirectContact";
 import { motion } from "framer-motion";
 
 
-export async function Personal() {
+export function Personal() {
   return (
     <div className="flex-1 flex flex-col items-center lg:items-start justify-start gap-8 w-full">
       <motion.div

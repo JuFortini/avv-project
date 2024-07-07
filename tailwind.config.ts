@@ -18,7 +18,7 @@ module.exports = {
         '300': '#64B4A6',
         '200': '#8CCABF',
         '100': '#B8DED8',
-        '50': '#E2F2F0',
+        '50': '#ECF6F5',
       },
       cyan: {
         '900': '#0E3B4D',
@@ -102,8 +102,6 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-  ],
+  plugins: [],
 }
 

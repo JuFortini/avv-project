@@ -18,7 +18,16 @@ export function Exams(): JSX.Element {
         transition={{ duration: 0.5, delay: 0.0, ease: "easeIn" }}
       >
         {/* // TODO: implementar redirecionamentos */}
-        <Typography variant="h2" className="font-semibold p-8 lg:pb-20">Nossos exames</Typography>
+        <div className="flex flex-col items-center p-8 lg:pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 220 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeIn" }}
+          >
+            <Typography variant="small" className="text-teal-500 font-bold tracking-widest">NOSSOS EXAMES</Typography>
+          </motion.div>
+          <Typography variant="h2" className="font-semibold text-center">Em nossas consultas realizamos diversos exames.</Typography>
+        </div>
         <div className="flex flex-col items-center lg:items-start justify-start gap-y-8 w-full">
           <div className="flex flex-col lg:flex-row self-center gap-y-8 lg:gap-x-20">
             <motion.div

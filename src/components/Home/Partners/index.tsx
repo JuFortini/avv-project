@@ -38,15 +38,24 @@ export async function Partners() {
   return (
     <section className="bg-teal-50 flex justify-center">
       <div className="container px-8 w-full lg:px-16 py-16 flex flex-col justify-between items-center gap-16">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.0, ease: "easeIn" }}
-        >
-          <Typography variant="h4" className="font-semibold font-serif">
-            Nossa iniciativa conta com o apoio de diversas empresas.
-          </Typography>
-        </motion.div>
+        <div className="flex flex-col items-center">
+          <motion.div
+            initial={{ opacity: 0, y: 220 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeIn" }}
+          >
+            <Typography variant="small" className="text-teal-500 font-bold tracking-widest">NOSSOS PARCEIROS</Typography>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.0, ease: "easeIn" }}
+          >
+            <Typography variant="h4" className="font-semibold font-serif">
+              Nossa iniciativa conta com o apoio de diversas empresas.
+            </Typography>
+          </motion.div>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-3 grid-flow-row gap-x-32 max-w-xl">
           {_slices.map((p: PartnerSlice) => (
             <PrismicNextLink className="max-w-24 md:max-w-none" key={p.id} field={p.primary.partner_website}>

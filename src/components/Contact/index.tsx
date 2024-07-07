@@ -1,5 +1,5 @@
 import { Footer } from "../Footer";
-import { FAQ } from "../Home/FAQ";
+import { FAQ } from "../FAQ";
 import { MainContact } from "./MainContact";
 
 export function ContactPage(): JSX.Element {
